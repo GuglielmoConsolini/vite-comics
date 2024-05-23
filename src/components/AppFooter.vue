@@ -3,9 +3,16 @@
 </script>
 
 <template>
-<h1>FOOTER</h1>
+<div class="container-fluid">
+
+</div>
 </template>
 
-<style>
-
+<style scoped>
+.container-fluid{
+    background-image: url(../assets/footer-bg.jpg);
+    object-fit: fill;
+    background-repeat: no-repeat;
+    height: 300px;
+}
 </style>
