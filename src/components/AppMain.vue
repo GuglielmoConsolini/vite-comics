@@ -5,7 +5,13 @@ import img3 from '../assets/buy-comics-shop-locator.png';
 import img4 from '../assets/buy-comics-subscriptions.png';
 import img5 from '../assets/buy-dc-power-visa.svg';
 
+
+import ComicList from './ComicList.vue';
+
 export default {
+  components: {
+    ComicList
+  },
   data() {
     return {
       options: [
@@ -37,9 +43,10 @@ export default {
 
 <template>
   <div>
-    <div class="container-fluid bg-dark p-5">
-      <h1>CONTENT GOES HERE</h1>
+    <div class=" jumbotron position-relative container-fluid bg-dark p-5">
+      <button type="button" class="pulsante btn btn-primary position-absolute">CURRENT SERIES</button>
     </div>
+    <ComicList />
     <div class="container-fluid bg-primary p-5 d-flex">
       <div v-for="option in options" :key="option.text" class="option-item d-flex">
         <img :src="option.img" alt="">
@@ -56,5 +63,14 @@ export default {
 img{
     width: 50px;
     height: 60px;
+}
+.jumbotron{
+  background-image: url(../assets/jumbotron.jpg);
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pulsante{
+  bottom: -20px;
 }
 </style>

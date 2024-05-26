@@ -29,7 +29,7 @@ export default {
       <AppHeader />
       <AppMain />
       <AppFooter />
-      <AppEnd />
+      
 
 </template>
 
