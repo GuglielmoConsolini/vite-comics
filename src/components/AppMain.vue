@@ -46,7 +46,9 @@ export default {
     <div class=" jumbotron position-relative container-fluid bg-dark p-5">
       <button type="button" class="pulsante btn btn-primary position-absolute">CURRENT SERIES</button>
     </div>
+
     <ComicList />
+    
     <div class="container-fluid bg-primary p-5 d-flex">
       <div v-for="option in options" :key="option.text" class="option-item d-flex">
         <img :src="option.img" alt="">

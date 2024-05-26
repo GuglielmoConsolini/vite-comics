@@ -1,6 +1,11 @@
 <script>
+  import ComicCard from './ComicCard.vue';
+
   export default{
     name: 'ComicList',
+    components: {
+        ComicCard
+    },
 
     data(){
         return{
@@ -85,36 +90,14 @@
 
 <template>
     <div class="container-fluid bg-dark d-flex pt-4 ps-5 pe-5">
-        <!-- <div v-for="fumetto in fumetti" class="productCard">
-          <img :src="fumetto.thumb" alt="">
-          <p>{{ fumetto.series }}</p>
-          <p> {{ fumetto.price }} </p>
-        </div> -->
-     <div class="cardsContainer">
-        <div v-for="fumetto in fumetti" class="productCard">
-             <img :src="fumetto.thumb" class="card-img-top" alt="...">
-            <p class="card-text">{{ fumetto.series }}</p>
-        </div>
-     </div>
+    
+     <ComicCard :fumetti="fumetti" />
+
     </div>
 
 
 </template>
 
-<style scoped>
+<style >
 
-.cardsContainer{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-}
-.productCard {
-    width: 16.66%;
-    padding: 1rem;
-}
-.productCard>img {
-  width: 100%;
-  aspect-ratio: 1;
-  
-}
 </style>

@@ -23,6 +23,18 @@
                     text: "GAMES",
                     url: "#contacts",
                 },
+                {
+                    text: "GAMES",
+                    url: "#contacts",
+                },
+                {
+                    text: "GAMES",
+                    url: "#contacts",
+                },
+                {
+                    text: "GAMES",
+                    url: "#contacts",
+                }
             ],
         }
     }
@@ -30,14 +42,17 @@
 </script>
 
 <template>
-<nav class="navbar bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="../assets/dc-logo.png" alt="Bootstrap" width="50" height="50">
-    </a>
-    <a v-for="link in links" :href="link.url">{{ link.text }}</a>
-  </div>
-</nav>
+
+   <div class="container-fluid bg-body pt-2 pb-2">
+     <div class="row">
+      <div class="col-6 text-center">
+        <img src="../assets/dc-logo.png" alt="Bootstrap" width="60" height="60">
+      </div>
+      <div class="col-6 pt-3 text-center">
+        <a class="me-3" v-for="link in links" :href="link.url">{{ link.text }}</a>
+      </div>
+     </div>
+   </div>
 </template>
 
 <style scoped>
